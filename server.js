@@ -1,11 +1,11 @@
-require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const morgan = require('morgan');
-const pool = require('./database/config'); // Importar la configuración de la base de datos
-const format = require('pg-format');
-const loggerExpress = require('logger-express');
+import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
+import pool from './database/config.js'; // Importar la configuración de la base de datos
+import * as loggerExpress from 'logger-express';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;

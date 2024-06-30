@@ -1,6 +1,4 @@
-CREATE DATABASE joyas;
-
-CREATE TABLE inventario (
+CREATE TABLE IF NOT EXISTS inventario (
   id SERIAL PRIMARY KEY,
   nombre VARCHAR(50),
   categoria VARCHAR(50),
@@ -16,3 +14,4 @@ INSERT INTO inventario (nombre, categoria, metal, precio, stock) VALUES
 ('Aros Hook Blue', 'aros', 'oro', 25000, 4),
 ('Anillo Wish', 'aros', 'plata', 30000, 4),
 ('Anillo Cuarzo Greece', 'anillo', 'oro', 40000, 2);
+
